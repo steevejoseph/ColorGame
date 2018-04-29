@@ -66,6 +66,10 @@ function reset() {
 
   resetButton.textContent = "New Colors";
   messageDisplay.textContent = "";
+  h1.style.backgroundColor = "steelblue";
+
+  document.querySelector('a').style.color = "steelblue";
+  document.querySelector('p').style.color = "steelblue";
 
   // change colors of squares on page
   for (var i = 0; i < squares.length; i++) {
@@ -78,7 +82,6 @@ function reset() {
     }
   }
 
-  h1.style.backgroundColor = "steelblue";
 }
 
 resetButton.addEventListener('click', function() {
@@ -94,6 +97,10 @@ function changeColor(color) {
   for (var i = 0; i < squares.length; i++) {
     squares[i].style.backgroundColor = color;
   }
+
+  document.querySelector('a').style.color = color;
+  document.querySelector('p').style.color = color;
+
 }
 
 function generateRandomColors(numberOfColors) {
